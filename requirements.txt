@@ -1,0 +1,4 @@
+pandas
+sqlite
+Pattern
+num2words

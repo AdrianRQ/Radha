@@ -20,8 +20,8 @@ def match_ingredient(input_str, ing_list):
     return max(matches, key=len)
 
 def check_plural(input_str, ing_matched):
-    if pluralize('ing_matched') in input_str.lower():
-        return(pluralize('ing_matched'))
+    if pluralize(ing_matched) in input_str.lower():
+        return(pluralize(ing_matched))
     else:
         return ing_matched
 
@@ -74,7 +74,7 @@ input_str = input_str.replace(quantity, '').replace('  ', ' ')
 
 unit = match_units(input_str, units_list)
 
-product_modifier = input_str.replace(unit, '').replace(' ', '').strip()
+product_modifier = input_str.replace(unit, '').replace('  ', ' ').strip()
 
 print("quantity:", quantity)
 print("unit:", unit)
